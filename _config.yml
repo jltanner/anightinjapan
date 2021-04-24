@@ -21,8 +21,8 @@ defaults:
     layout: post
 email: jamietanner@gmail.com
 description: A blog about Japan
-baseurl: ''
-url: ''
+baseurl: 
+url: 
 twitter_username: jamietanner
 github_username: jltanner
 theme: minima
