@@ -1,50 +1,18 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>A Night in Japan</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/assets/css/app.css">
-    </head>
-    <body>
-        <div class="circle"></div>
-        <header>
-    <a href="/">
-        <img src="/assets/images/logo.svg" alt="A Night in Japan">
-    </a>
+---
+title: Rik was here
+layout: default
+potato: test test test
+---
 
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-    </nav>
-</header>
-
-        <section>
-            <h1>A Night in Japan</h1>
+<h1>{{ site.title }}</h1>
 
 <div class="blog-posts">
-    
-        <a href="/2021/04/17/welcome-to-jekyll.html">
-            <h2>Everybody wears Supreme</h2>
-            <p>One of the five supreme stores is located in omotensando in harajuku, Tokyo, and this store is a smaller one in Tokyo comparing with the other one in Shibuya.</p>
+    {% for post in site.posts %}
+        <a href="{{ [post.url ]}}">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.excerpt }}</p>
             <p class="read-more">Read More <img src="assets/images/chevron.svg"></p>
         </a>
-    
-        <a href="/2021/04/16/new-post.html">
-            <h2>All of the lights</h2>
-            <p>The nightlife here runs the gamut, from rowdy izakayas and beer bars, to red-light entertainment and the infamous Robot Restaurant.</p>
-            <p class="read-more">Read More <img src="assets/images/chevron.svg"></p>
-        </a>
-    
-        <a href="/2021/04/15/tokyo-train-tips.html">
-            <h2>5 Tokyo Train Tips</h2>
-            <p>Here are my 5 tips to keep you sane and get you to your destination on the Tokyo Subway.</p>
-            <p class="read-more">Read More <img src="assets/images/chevron.svg"></p>
-        </a>
-    
+    {% endfor %}
 </div>
 
-
-        </section>
-    </body>
-</html>
